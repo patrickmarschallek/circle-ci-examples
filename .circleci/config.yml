@@ -1,0 +1,13 @@
+version: 2
+jobs:
+   build:
+     docker:
+       - image: circleci/openjdk:8
+     working_directory: /circle-ci-examples
+     steps:
+       - checkout
+       - run: echo "hello world"
+
+   test:
+     override:
+       - echo "test"
